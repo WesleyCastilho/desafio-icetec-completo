@@ -1,0 +1,15 @@
+<div class="form-group form-check">
+  <input (change)="onCompletedCheckChange(dev)" [(ngModel)]="dev.completed" class="form-check-input" type="checkbox"/>
+</div>
+<div [innerHTML]="dev.name" [ngClass]="dev.completed ? 'dev-completed' : ''" class="dev-item-description">
+</div>
+<div>
+  <button [routerLink]="['/edit', dev.id]" class="btn btn-primary mr-1" type="button">
+    Alterar
+  </button>
+</div>
+<div>
+  <button (click)="remove(dev)" class="btn btn-danger" type="button">
+    Excluir
+  </button>
+</div>

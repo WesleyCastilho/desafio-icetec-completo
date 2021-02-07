@@ -1,0 +1,8 @@
+.dev-completed {
+  text-decoration: line-through;
+}
+
+.dev-item-description {
+  flex-grow: 1;
+  white-space: pre-line;
+}

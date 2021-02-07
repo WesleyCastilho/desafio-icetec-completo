@@ -1,0 +1,18 @@
+<h2>Listagem de Dev's</h2>
+<hr/>
+
+<button [routerLink]="['/new']" class="btn btn-primary mb-2" type="button">
+  Novo Cadastro
+</button>
+
+<section>
+  <div *ngIf="devs.length == 0" class="alert alert-warning" role="alert">
+    Nenhum Dev foi cadastrado ainda.
+  </div>
+
+  <ul *ngIf="devs.length > 0" class="list-group">
+    <li *ngFor="let dev of devs" class="list-group-item">
+      <app-dev-list-item (onDeleteDev)="onDevDeleted($event)" [dev]="dev" class="dev-item"></app-dev-list-item>
+    </li>
+  </ul>
+</section>
